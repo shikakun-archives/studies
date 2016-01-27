@@ -47,29 +47,6 @@ var CommentList = React.createClass({
 });
 
 var CommentForm = React.createClass({
-  render: function() {
-    return (
-      <div className="commentForm">
-        Hello, world! I am a CommentForm.
-      </div>
-    );
-  }
-});
-
-var Comment = React.createClass({
-  render: function() {
-    return (
-      <div className="comment">
-        <h2 className="commentAuthor">
-          {this.props.author}
-        </h2>
-        {this.props.children}
-      </div>
-    );
-  }
-});
-
-var CommentForm = React.createClass({
   handleSubmit: function(e) {
     e.preventDefault();
     var author = ReactDOM.findDOMNode(this.refs.author).value.trim();
@@ -89,6 +66,19 @@ var CommentForm = React.createClass({
         <input type="text" placeholder="Say something..." ref="text" />
         <input type="submit" value="Post" />
       </form>
+    );
+  }
+});
+
+var Comment = React.createClass({
+  render: function() {
+    return (
+      <div className="comment">
+        <h2 className="commentAuthor">
+          {this.props.author}
+        </h2>
+        {this.props.children}
+      </div>
     );
   }
 });
