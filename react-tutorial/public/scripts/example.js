@@ -44,6 +44,11 @@ var Comment = React.createClass({
   }
 });
 
+var data = [
+  {author: "Pete Hunt", text: "This is one comment"},
+  {author: "Jordan Walke", text: "This is *another* comment"}
+];
+
 ReactDOM.render(
   <CommentBox />,
   document.getElementById('content')
