@@ -54,7 +54,7 @@ var CommentForm = React.createClass({
     if (!text || !author) {
       return;
     }
-    // TODO: サーバにリクエストを送信
+    this.props.onCommentSubmit({author: author, text: text});
     ReactDOM.findDOMNode(this.refs.author).value = '';
     ReactDOM.findDOMNode(this.refs.text).value = '';
     return;
